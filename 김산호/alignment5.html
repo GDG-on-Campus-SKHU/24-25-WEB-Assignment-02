@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>alignment5</title>
+</head>
+<body>
+  <h1>숫자 맞추기 게임</h1>
+  <button>게임 시작</button>
+  <script>
+    const $button = document.querySelector('button');
+    let correct;
+    let count;
+
+    function start() {
+      correct = Math.floor(Math.random() * 10) + 1;
+      count=0;
+      let n;
+      
+      while(true) {
+        n = prompt('숫자를 입력하세요 (1~10)');
+        if(n === null) {
+          return;
+        }
+
+        count++;
+        n = Number(n);
+
+        if(n < correct) {
+          alert('up');
+        } else if(n > correct) {
+          alert('down');
+        } else if(n === correct) {
+          alert(`정답입니다! ${count}번 만에 맞췄어요!`);
+          break;
+        }
+      }
+    }
+
+    $button.addEventListener('click', start);
+  </script>
+</body>
+</html>
