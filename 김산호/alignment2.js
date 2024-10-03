@@ -8,7 +8,7 @@ let students = {
 function Average(studentScore) {
   let total=0;
 
-  Object.values(students).map((score) => {
+  Object.values(students).map((score) => { //map을 사용하여 sudents 객체 안에 있는 요소들 하나씩 선택
     total += score;
   })
   
