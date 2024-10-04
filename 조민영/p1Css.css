@@ -1,25 +1,30 @@
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 form {
   border: 1px solid rgb(201, 201, 201);
   box-shadow: 2px 0px 5px #d8d7d7;
   border-radius: 5px;
   background-color: #f9f9f9;
-  width: 40%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 30px;
   text-align: center;
-}
-
-img {
-  margin-top: 20px;
+  height: 80%;
 }
 
 button {
   margin-top: 10px;
-  margin-bottom: 20px;
 }
 
 p {
   position: relative;
   top: -10px;
+}
+
+option {
+  text-align: center;
 }
