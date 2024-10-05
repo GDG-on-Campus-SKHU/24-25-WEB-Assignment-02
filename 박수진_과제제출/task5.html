@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 맞추기 게임</title>
+</head>
+<body>
+
+<h1>숫자 맞추기 게임</h1>
+<input type="button" id="startGame" value="게임 시작" onclick="startGame()"></input>
+<script>
+    let randomNumber = Math.floor(Math.random()*10)+1;
+    let save = 0;
+    let guess;
+    document.getElementById("startGame").onclick = startGame;
+    while(true){
+        guess = parseInt(prompt("숫자를 입력하세요 (1~10): "), 10);
+        save++;
+        
+        if(guess === randomNumber){
+            alert(`정답입니다! ${save}번 만에 맞췄어요!`);
+            break;
+        }
+        else if(guess > randomNumber){
+            alert("DOWN! 더 작은 숫자를 입력하세요.");
+        }
+        else if(guess < randomNumber){
+            alert("UP! 더 큰 숫자를 입력하세요.");
+        }
+    }
+    document.getElementById("startGame").onclick = startGame;
+</script>
+</body>
+</html>
