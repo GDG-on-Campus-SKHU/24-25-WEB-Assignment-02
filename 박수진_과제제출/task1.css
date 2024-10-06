@@ -2,12 +2,14 @@
 
 *{
     text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 form{
     margin: auto;
     border: 1px solid lightgrey;
-    width:400px;
-    height: 650px;
+    width:500px;
+    height: 700px;
     box-shadow: 3px 3px 6px lightgrey;
     background-color: rgb(245, 244, 244);
     border-radius: 8px;
