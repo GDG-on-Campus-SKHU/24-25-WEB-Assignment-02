@@ -3,42 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project1</title>
     <link rel="stylesheet" href="project1.css" />
     <script>
       function showAlert() {
         alert("주문이 완료되었습니다!");
       }
     </script>
+    <title>project1</title>
   </head>
   <body>
-    <div>
-      <img src="fruit.jpg" alt="귤 사진" />
-      <h1 class="style">싱싱한 귤 판매합니다^^</h1>
-      <h3 class="style"><strong>가격 500억원/박스</strong></h3>
-      <h4 class="style-2">
-        싱싱한 귤 박스 단위로 판매합니다~<br />먹으면 얼굴이 병주처럼 변하게 되는 아주 좋은 효능이 있답니다^^*
-      </h4>
-      <form>
-        <label for="name">주문자 이름</label>
-        <input type="text" id="name" name="name" />
+    <div class="container">
+      <img src="fruit.jpg" />
+      <h1>싱싱한 귤 판매합니다^^</h1>
+      <div class="text1"><h3>가격 500억원/박스</h3></div>
+      <div class="text2">
+        싱싱한 귤 박스 단위로 판매합니다~ <br />먹으면 얼굴이 병주처럼 변하게 되는 아주 좋은 효능이 있답니다^^*
+      </div>
 
-        <label for="count">수량</label>
-        <select>
-          <option value="0">------수량 선택------</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-
-        <label for="address">주소</label>
-        <input type="text" id="address" name="address" />
-
-        <label for="number">전화번호</label>
-        <input type="tel" id="phone" name="phone" />
-        <br />
-        <button type="submit" onclick="showAlert()">주문하기</button>
-      </form>
+      <label for="name">주문자 이름</label><br />
+      <input type="text" /><br />
+      <label for="count">수량</label><br />
+      <select>
+        <option value="0">-----------수량 선택----------</option>
+        <option value="1" class="number">1</option>
+        <option value="2" class="number">2</option>
+        <option value="3" class="number">3</option></select
+      ><br />
+      <label for="address">주소</label><br />
+      <input type="text" /><br />
+      <label for="number">전화번호</label><br />
+      <input type="tel" /><br />
+      <button type="submit" onClick="showAlert()">주문하기</button>
     </div>
   </body>
 </html>
