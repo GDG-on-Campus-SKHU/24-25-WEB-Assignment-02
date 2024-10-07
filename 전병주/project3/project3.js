@@ -1,6 +1,6 @@
 let final = [];
 
-for (i = 10; i >= 0; i--) {
+for (i = 1; i <= 10; i++) {
   //i가 10부터 0까지 내려오면서 반복
   if (i % 2 == 1) {
     // i가 홀수인 경우만 출력
@@ -8,5 +8,4 @@ for (i = 10; i >= 0; i--) {
     final.unshift(str); //str를 배열 final에 이동
   }
 }
-
 console.log(final); //출력
