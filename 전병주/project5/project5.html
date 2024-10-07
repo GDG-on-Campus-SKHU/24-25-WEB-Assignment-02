@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project5</title>
+  </head>
+  <body>
+    <h1>숫자 맞추기 게임</h1>
+    <button type="button" id="startGame">게임 시작</button>
+    <script>
+      let user = 0; // 전역변수 사용자 초기화
+      let count = 1; // 전역 변수 실행횟수 초기화
+
+      function startGame() {
+        let computer = Math.floor(Math.random() * 9) + 1; // 전역 변수 컴퓨터 랜덤 값(1~10)까지 선언
+
+        while (computer != user) {
+          // 맞출 때까지 계속 반복 ㅎㅎ
+          user = prompt("숫자를 입력하세요(1~10)");
+
+          if (user < 1 || user > 10) {
+            // 사용자의 입력값이 정해진 범위에서 넘어가면 에러 창 뜸
+            alert("ERROR:Wrong Number");
+            count++;
+          }
+
+          if (computer > user) {
+            //up인 경우
+            alert(`UP`);
+            count++;
+          } else if (computer < user) {
+            //down인 경우
+            alert(`DOWN`);
+            count++;
+          }
+        }
+        alert(`정답입니다! ${count}번 만에 맞췄어요!`); // 오예 정답
+      }
+
+      document.getElementById("startGame").onclick = startGame; // 게임 시작하게 하는 이벤트 핸들러 코드
+    </script>
+  </body>
+</html>
