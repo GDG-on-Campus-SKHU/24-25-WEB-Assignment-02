@@ -1,0 +1,30 @@
+.box {
+  width: 300px;
+  height: 450px;
+  border: solid 2px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  box-shadow: 3px 4px 4px rgb(141, 139, 139);
+  background-color: rgb(252, 250, 246);
+  margin: auto;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  padding: 30px;
+}
+
+body {
+  text-align: center;
+}
+form {
+  border-color: black;
+}
+h1 {
+  font-size: 25px;
+}
+input {
+  border-color: black;
+}
+img {
+  width: 200px;
+  height: 100px;
+}
+/* *은 전부다 적용할 때 사용*/
