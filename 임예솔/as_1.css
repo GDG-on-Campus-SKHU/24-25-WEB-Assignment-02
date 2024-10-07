@@ -6,20 +6,24 @@ body {
 
 .form {
   text-align: center;
-  border: 1px solid rgb(184, 184, 184);
-  box-shadow: 2px 4px 4px rgb(225, 225, 225);
+  border: 2px solid rgb(184, 184, 184);
+  box-shadow: 4px 4px 4px rgb(225, 225, 225);
   border-radius: 5px;
-  width: 35%;
-  height: 80%;
+  width: 500px;
+  height: 650px;
   background-color: rgb(253, 248, 248);
   justify-content: center;
 }
 
 img {
-  width: 250px;
-  height: 150px;
+  width: 400px;
+  height: 210px;
 }
 
 button {
   margin: 10px 10px;
+}
+
+select {
+  width: 170px;
 }
