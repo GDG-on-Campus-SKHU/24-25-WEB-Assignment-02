@@ -1,0 +1,31 @@
+body {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.form {
+  text-align: center;
+  border: 2px solid rgb(225, 225, 225);
+  box-shadow: 4px 4px 4px rgb(225, 225, 225);
+  border-radius: 5px;
+  width: 500px;
+  height: 650px;
+  background-color: rgb(253, 248, 248);
+  justify-content: center;
+  margin-top: 30px;
+}
+
+img {
+  width: 400px;
+  height: 210px;
+}
+
+button {
+  margin: 10px 10px;
+}
+
+select {
+  width: 170px;
+  text-align: center;
+}
