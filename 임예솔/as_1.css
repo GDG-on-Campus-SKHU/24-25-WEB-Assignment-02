@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.form {
+  text-align: center;
+  border: 1px solid rgb(184, 184, 184);
+  box-shadow: 2px 4px 4px rgb(225, 225, 225);
+  border-radius: 5px;
+  width: 35%;
+  height: 80%;
+  background-color: rgb(253, 248, 248);
+  justify-content: center;
+}
+
+img {
+  width: 250px;
+  height: 150px;
+}
+
+button {
+  margin: 10px 10px;
+}
