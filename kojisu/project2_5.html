@@ -3,143 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <title>5번 과제</title>
-    <script>
-      let m = parseInt(n);
-      function randomNumber(n) {
-        document.getElementById("startGame").onclick = startGame;
-        Math.floor(Math.random() * (10 - 1) + 1);
-        if (n < random) {
-          alert("up");
-          if (n < random) {
-            document.write("up");
-            if (n < random) {
-              document.write("up");
-              if (n < random) {
-                document.write("up");
-                if (n < random) {
-                  document.write("up");
-                  if (n < random) {
-                    document.write("up");
-                    if (n < random) {
-                      document.write("up");
-                      if (n < random) {
-                        document.write("up");
-                        if (n < random) {
-                          document.write("up");
-                        } else if (n > random) {
-                          document.write("down");
-                        } else {
-                          document.write(
-                            "정답입니다! 아홉 번만에 맞추셨습니다."
-                          );
-                        }
-                      } else if (n > random) {
-                        document.write("down");
-                      } else {
-                        document.write("정답입니다! 여덟 번만에 맞추셨습니다.");
-                      }
-                    } else if (n > random) {
-                      document.write("down");
-                    } else {
-                      document.write("정답입니다! 일곱 번만에 맞추셨습니다.");
-                    }
-                  } else if (n > random) {
-                    document.write("down");
-                  } else {
-                    document.write("정답입니다! 여섯 번만에 맞추셨습니다.");
-                  }
-                } else if (n > random) {
-                  document.write("down");
-                } else {
-                  document.write("정답입니다! 다섯 번만에 맞추셨습니다.");
-                }
-              } else if (n > random) {
-                document.write("down");
-              } else {
-                document.write("정답입니다! 네 번만에 맞추셨습니다.");
-              }
-            } else if (n > random) {
-              document.write("down");
-            } else {
-              document.write("정답입니다! 세 번만에 맞추셨습니다.");
-            }
-          } else if (n > random) {
-            document.write("down");
-          } else {
-            document.write("정답입니다! 두 번만에 맞추셨습니다.");
-          }
-        } else if (n > random) {
-          document.write("down");
-          if (n > random) {
-            document.write("down");
-            if (n > random) {
-              document.write("down");
-              if (n > random) {
-                document.write("down");
-                if (n > random) {
-                  document.write("down");
-                  if (n > random) {
-                    document.write("down");
-                    if (n > random) {
-                      document.write("down");
-                      if (n > random) {
-                        document.write("down");
-                        if (n > random) {
-                          document.write("down");
-                        } else if (n < random) {
-                          document.write("up");
-                        } else {
-                          document.write(
-                            "정답입니다! 아홉 번만에 맞추셨습니다."
-                          );
-                        }
-                      } else if (n < random) {
-                        document.write("up");
-                      } else {
-                        document.write("정답입니다! 여덟 번만에 맞추셨습니다.");
-                      }
-                    } else if (n < random) {
-                      document.write("up");
-                    } else {
-                      document.write("정답입니다! 일곱 번만에 맞추셨습니다.");
-                    }
-                  } else if (n < random) {
-                    document.write("up");
-                  } else {
-                    document.write("정답입니다! 여섯 번만에 맞추셨습니다.");
-                  }
-                } else if (n < random) {
-                  document.write("up");
-                } else {
-                  document.write("정답입니다! 다섯 번만에 맞추셨습니다.");
-                }
-              } else if (n < z) {
-                document.write("up");
-              } else {
-                document.write("정답입니다! 네 번만에 맞추셨습니다.");
-              }
-            } else if (n < random) {
-              document.write("up");
-            } else {
-              document.write("정답입니다! 세 번만에 맞추셨습니다.");
-            }
-          } else if (n < random) {
-            document.write("up");
-          } else {
-            document.write("정답입니다! 두 번만에 맞추셨습니다.");
-          }
-        } else if (n == random) {
-          document.write("정답입니다! 한번에 맞추셨습니다.");
-        } else {
-          document.write("범위를 벗어났습니다.");
-        }
-      }
-    </script>
   </head>
   <body>
+    <button id="startGame">게임시작</button>
+
     <script>
-      let n = prompt("숫자를 입력하세요.");
-      randomNumber(n);
+      function startGame() {
+        let number = Math.floor(Math.random() * 10) + 1;
+        let count = 0;
+        let n = null;
+
+        while (n !== number) {
+          n = parseInt(prompt("숫자를 입력하세요."));
+          count++;
+
+          if (number > 10 || number < 1) {
+            alert("범위를 벗어났습니다. 1~10 이내의 숫자를 입력하세요.");
+          }
+
+          if (number < n) {
+            alert("down");
+          } else if (number > n) {
+            alert("up");
+          } else {
+            alert(`축하합니다! ${count}번 만에 맞췄어요.`);
+            break;
+          }
+        }
+      }
+
+      document.getElementById("startGame").onclick = startGame;
     </script>
   </body>
 </html>
