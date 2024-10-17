@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <head>
+    <title>과제 1번</title>
+    <style>
+      @import url(project2_1.css);
+    </style>
+  </head>
+  <body>
+    <div id = "box">
+    <img src="./20241004_234237.jpg" width="300" height="200">
+    <h2>귀여운 인형 판매합니다!</h2>
+    <h4>개당 1000원</h4>
+    손바닥 만한 인형이구, 랜덤으로 보내드려요!<br>
+    반품, 교환 문의는 안받아요^^<br>
+    배송비는 3000원이에용<br><br>
+    <form>
+      주문자 이름<br>
+      <input type="text"><br>
+      수량<br>
+      <select name="count">
+        <option value="1" selected>-- 수량을 선택하세요 --</option>
+        <option value="2">1</option>
+        <option value="3">2</option>
+        <option value="4">3</option>
+        </select><br>
+      주소<br>
+      <input type="text"><br>
+      전화번호<br>
+      <input type="tel"><br><br>
+      <button onclick="alert('주문이 완료되었습니다!')">
+        주문하기
+      </button>
+      </div>
+    </form>
+  </body>
+</html>

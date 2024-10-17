@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>5번 과제</title>
+  </head>
+  <body>
+    <button id="startGame">게임시작</button>
+
+    <script>
+      function startGame() {
+        let number = Math.floor(Math.random() * 10) + 1;
+        let count = 0;
+        let n = null;
+
+        while (n !== number) {
+          n = parseInt(prompt("숫자를 입력하세요."));
+          count++;
+
+          if (number > 10 || number < 1) {
+            alert("범위를 벗어났습니다. 1~10 이내의 숫자를 입력하세요.");
+          }
+
+          if (number < n) {
+            alert("down");
+          } else if (number > n) {
+            alert("up");
+          } else {
+            alert(`축하합니다! ${count}번 만에 맞췄어요.`);
+            break;
+          }
+        }
+      }
+
+      document.getElementById("startGame").onclick = startGame;
+    </script>
+  </body>
+</html>
