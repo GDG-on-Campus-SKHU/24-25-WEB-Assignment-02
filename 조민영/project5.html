@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>숫자 맞추기 게임</h1>
+        <button id="startGame">게임시작</button>
+        
+
+    </body>
+    <script>
+        document.getElementById("startGame").onclick = startGame;//이걸 넣었더니 순서 때문인지 함수 실행이 안되어서 아래로 위치를 바꿨습니다
+
+        let myNum=0;//사용자 입력 초기값(반복문을 돌리기 위해)
+        let count=1;//몇 번만에 맞췄는지 알려줄 카운트 선언,할당
+        
+        function startGame(){
+           
+        let comNum = Math.floor(Math.random()*11+1);//컴퓨터 랜덤 숫자 생성
+            
+        while(comNum!=myNum){//정답을 맞출 때까지 반복해서 입력받기 위한 반복문
+            myNum=prompt('숫자를 입력하세요(1~10)');//사용자 숫자 입력
+               
+            if(comNum>myNum){//컴퓨터 숫자보다 작은 경우
+                alert(`UP`);
+                count++;
+            }else if(comNum<myNum){//컴퓨터 숫자보다 큰 경우
+                alert(`DOWN`);
+                count++;
+            }
+        
+        }
+            alert(`정답입니다! ${count}번 만에 맞췄어요!`);//정답을 맞춰 반복문을 빠져나오면 띄우는 창
+
+           
+        }
+       
+
+    </script>
+</html>
