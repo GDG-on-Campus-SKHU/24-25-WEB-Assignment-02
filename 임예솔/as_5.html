@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>과제 5</title>
+  </head>
+  <body>
+    <h1>숫자 맞추기 게임</h1>
+    <button type="button" id="startGame">게임 시작</button>
+
+    <script>
+      document.getElementById("startGame").onclick = startGame; // 게임을 시작하게 하는 이벤트 핸들러 코드
+
+      function startGame() {
+        let count = 0; // 시도 횟수를 0으로 초기화
+        let user = 0; // 사용자 입력
+        let computer = Math.floor(Math.random() * 10) + 1; // 컴퓨터 (1~10 사이의 랜덤 숫자)
+
+        while (true) {
+          user = prompt("숫자를 입력하세요 (1~10)"); // 사용자 입력 받기
+          count++; // 시도 횟수 증가
+          user = Number(user); // 정답이 정수가 아닌 오류가 뜨길래...gpt한테 물어봤어요
+
+          if (user === computer) {
+            // 랜덤값과 입력받은 값이 똑같을 때
+            alert("정답입니다! " + count + "번째 시도 만에 맞췄습니다."); // 정답 안내문 표시
+            break; // 게임 종료
+          } else if (user < computer) {
+            // 입력받은 수가 작다면
+            alert("UP"); // 힌트창 표시
+          } else {
+            // 또는 (입력받은 수가 크다면)
+            alert("DOWN"); // 힌트창 표시
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
