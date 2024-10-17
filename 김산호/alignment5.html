@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>alignment5</title>
+</head>
+<body>
+  <h1>숫자 맞추기 게임</h1>
+  <button>게임 시작</button>
+  <script>
+    const $button = document.querySelector('button'); // querySelector로 button 요소 선택 후 $button 변수에 대입
+    let correct; // 정답
+    let count; // 횟수
+
+    function start() {
+      correct = Math.floor(Math.random() * 10) + 1; // 1~10까지의 정수 중 랜덤으로 하나 선택
+      count=0; // 게임 시작하면 횟수 0으로 초기화
+      let n; // 사용자의 입력값을 저장할 변수
+      
+      while(true) {
+        n = prompt('숫자를 입력하세요 (1~10)'); // 입력값 저장
+        if(n === null) { //취소를 눌렀다면 게임 종료
+          return;
+        }
+
+        count++; // 횟수 늘리기
+        n = Number(n); // string 타입인 n을 Number 타입으로 변환
+
+        if(n < correct) { // 정답보다 작으면
+          alert('up');
+        } else if(n > correct) { // 정답보다 크면
+          alert('down');
+        } else if(n === correct) { // 정답이면
+          alert(`정답입니다! ${count}번 만에 맞췄어요!`);
+          break;
+        }
+      }
+    }
+
+    $button.addEventListener('click', start); // $button 요소(button)에 click 이벤트가 발생하면 start 함수가 실행되게 이벤트 리스너 추가
+  </script>
+</body>
+</html>
